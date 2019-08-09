@@ -25,15 +25,26 @@ class Themeshub_Customize{
      * @since 1.0.0
      */
     public function __construct(){
-        add_action('customize_register', array($this, 'custom_settings'));
+        add_action('customize_register', array($this, 'register_settings'));
         add_action('customize_register', array($this, 'custom_controls'));
     }
 
     /**
-     * Load Custom Settings Classes
+     * Add Customizer options
+     * @since 1.0.0
      */
-    public static function custom_settings($wp_customize){
+    public function register_settings(){
         $dir = THEMESHUB_INC_DIR.'customizer/settings/';
+        $files = array(
+            'general',
+            'header',
+            'blog',
+            'sidebar',
+            'footer',
+        );
+        foreach ($files as $key) {
+            require_once( $dir.$key.'.php');
+        }
     }
 }
 
