@@ -16,9 +16,15 @@ if( ! defined( 'ABSPATH' )){
 
 if( ! class_exists( 'Themeshub_Customize' ) ):
 
-
+/**
+ *  Customizer Class
+ */
 class Themeshub_Customize{
-
+    /**
+     * Setup Class 
+     * @since 1.0.0
+     */
+    
 }
 
 endif;
