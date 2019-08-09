@@ -27,7 +27,10 @@ class Themeshub{
         add_action('after_setup_theme', array('Themeshub', 'themeshub_constants'), 0);
 
         // Include all Core Theme function files
-        add_action('after_setup_theme', array('Themeshub', 'themehub_includes'), 1);
+        add_action('after_setup_theme', array('Themeshub', 'themeshub_includes'), 1);
+
+        // Load Theme Classes
+        add_action( 'after_setup_theme', array('Themeshub', 'themeshub_classes'), 2);
 
         // Add Themes Features and supports
         add_action('after_setup_theme', array('Themeshub', 'themeshub_setup'), 3);
@@ -86,7 +89,15 @@ class Themeshub{
      */
     public static function themehub_includes(){
         $dir = THEMESHUB_INC_DIR;
-        require_once($dir.'customizer.php');
+        // require_once($dir.'customizer.php');
+    }
+
+    /**
+     * Load Themeshub Core Classes
+     */
+    public static function themeshub_classes(){
+        $dir = THEMESHUB_INC_DIR;
+        require_once($dir.'customizer/customizer.php')
     }
 
     /**
