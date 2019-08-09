@@ -1,5 +1,14 @@
-<?php
-class Themeshub_Header_Options{
-    public $section = 'th_header_options';
+<?php 
+/**
+ * Customize Header Options
+ * @since Themeshub 1.0.0
+ */
+if(! define( 'ABSPATH' ) ){
+    exit;
 }
-return new Themeshub_Header_Options;
+if(! class_exists('Themeshub_Customize_Header_Options') ):
+    class Themeshub_Customize_Header_Options{
+        
+    }
+endif;
+return new Themeshub_Customize_Header_Options;
