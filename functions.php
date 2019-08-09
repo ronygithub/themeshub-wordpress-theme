@@ -194,20 +194,7 @@ class Themeshub{
         ) );
     }
 
-    /**
-     * Themeshub Customizer CSS
-     * Adding css using wp_head hook 
-     * @since Themeshub 1.0.0 
-     */
-    public static function themeshub_customizer_css(){
-        if( false === get_theme_mod( 'th_display_header' ) ) { ?>
-            <style type="text/css">
-                .themeshub__header{
-                    display: none;
-                }
-            </style>
-        <?php }
-    }
+    
 
 
 }
