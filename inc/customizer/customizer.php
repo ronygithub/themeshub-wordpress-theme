@@ -10,9 +10,7 @@
 /**
  * Preventing Script From Direct Accessing into the file
  */
-if( ! defined( 'ABSPATH' )){
-    exit;
-}
+
 
 if( ! class_exists( 'Themeshub_Customize' ) ):
 
