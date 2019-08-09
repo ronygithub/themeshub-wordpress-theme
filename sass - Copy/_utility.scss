@@ -1,0 +1,10 @@
+.single_item{
+    border:  1px solid $primary-color;
+    display: flex;
+    flex-direction: column;
+    
+}
+.inner__flex{
+    display: flex;
+    justify-content: space-between;
+}

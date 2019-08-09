@@ -1,0 +1,71 @@
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.themeshub{
+    display: grid;
+    grid-template-areas: 
+            'head head head head head head head head'
+            'main main main main main main main main'
+            'foot foot foot foot foot foot foot foot';
+    transition: 0.4s;
+    backface-visibility: hidden;
+    &__header{
+        grid-area: head;            
+        display: grid;
+        grid-template-areas: '. inner inner inner inner inner .';   
+        &--inner{
+            grid-area: inner;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    } // End Header Layout
+    &__main{
+        grid-area: main;
+        background: lighten($color: $light-color, $amount: 15%);
+        padding: 4rem 0rem;
+        &--inner{
+            grid-area: inner;
+            display: flex;
+            .main{
+                &__content{
+                    flex: 5;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+                    grid-template-rows: min-content;
+                    grid-gap: 2rem;
+                    align-items: flex-start;
+                }
+                &__sidebar{
+                    flex-basis: 25%;
+                    margin-left: 3rem;
+                    @media (max-width: 767px) {
+                        margin-left: 0;
+                        margin-top: 2rem;
+                    }
+                }
+            }
+            @media (max-width: 767px) {
+                flex-direction: column;   
+                
+            }
+        }    
+        
+    } // End Main Layout
+    &__footer{
+        grid-area: foot;
+        padding: 2rem 0;
+        display: grid;
+        background: $dark-color;
+        grid-template-areas: '. inner inner inner inner inner inner .';   
+        &--inner{
+            grid-area: inner;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        
+    }// End Footer Layout
+}
