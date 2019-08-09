@@ -87,7 +87,7 @@ class Themeshub{
      * Include all Core Theme function files
      * @since 1.0.0
      */
-    public static function themehub_includes(){
+    public static function themeshub_includes(){
         $dir = THEMESHUB_INC_DIR;
         // require_once($dir.'customizer.php');
     }
