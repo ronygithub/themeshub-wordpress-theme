@@ -97,7 +97,7 @@ class Themeshub{
      */
     public static function themeshub_classes(){
         $dir = THEMESHUB_INC_DIR;
-        require_once($dir.'customizer/customizer.php')
+        require_once($dir.'customizer/customizer.php');
     }
 
     /**
