@@ -1,6 +1,6 @@
 <?php
 /**
- * Themeshub Customizer Class
+ * Theme Customizer File for Themeshub
  * Add Customize setting for your theme to make it more usable
  * @package Themeshub
  * @version 1.0.0
