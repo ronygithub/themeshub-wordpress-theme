@@ -1,0 +1,126 @@
+
+.brand_logo{
+    text-transform: uppercase;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.8s;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    display: inline-flex;
+    margin-left: 1.5rem;
+    &:hover{
+        letter-spacing: 3px;
+    }
+}
+figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    transition: box-shadow 0.4s cubic-bezier(0.445, 0.05, 0.55, 0.95) 0.2s;
+    backface-visibility: hidden;
+    &:hover{
+        img{
+            transform: scale(1.03);
+            backface-visibility: hidden;
+        }
+    }
+    .featured_image_container{
+        height: 15rem;
+        overflow: hidden;
+        img{
+            height: 100%;
+            transition: 0.6s;
+        }
+    }
+    figcaption{
+        display: flex;
+        background: transparentize($color: $primary-color, $amount: 0.9);
+        min-height: 7rem;
+        padding: 2rem 1rem 0;
+        flex-direction: column;
+        .single_item_title{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            font-size: 1.3rem;
+            font-weight: 700;
+            a{
+                color: lighten($color: $dark-color, $amount: 25%);
+            }
+            
+        }
+        ul{
+            a{
+                font-size: 1.2rem;
+                color: darken($light-color, 20%);
+                font-weight: 300;
+            }
+        }
+    }
+    &:hover{
+        box-shadow: 0 0 0.8rem 0rem transparentize($color: $dark-color, $amount: 0.77);
+        border-radius: 2px;
+    }
+}
+
+.page_content,
+.single_post_item{
+    flex: 5;
+}
+.page_header{
+    display: flex;
+    justify-content: space-between;
+}
+.product_option{
+    letter-spacing: 3px;
+    transform: rotate(-90deg);
+    color: $dark-color;
+    text-align: center;
+    margin-left: 2rem;
+    cursor: pointer;
+    font-weight: 800;
+    
+}
+button.th-button {
+    padding: 0;
+    align-self: flex-start;
+    font-size: 1.5rem;
+    color: darken($light-color, 10%);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    transition: 0.3s;
+    &:hover, 
+    &:focus{
+        outline: none;
+        background: darken($light-color, 10%);
+        color: $dark-color;
+    }
+}
+.template_options{
+    padding: 0;
+    a{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: 1.3rem;
+        text-transform: capitalize;
+        padding: 1rem;
+        text-align: center;
+        i{
+            margin-right: 1rem;
+            color: $primary-color;
+            font-size: 1.5rem;
+        }
+        &:hover{
+            background: transparentize($color: $primary-color, $amount: 0.9);
+        }
+
+    }
+}
+.uk-slideshow {
+    box-shadow: 0 0 1rem 0 #999;
+    margin-bottom: 2rem;
+}

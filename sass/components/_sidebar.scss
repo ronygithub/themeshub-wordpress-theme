@@ -1,0 +1,34 @@
+.main__sidebar{
+    .sidebar{
+        margin-bottom: 3rem;
+        padding: 1rem;
+        border-top: 3px solid darken($color: $primary-color, $amount: 25%);
+        background: transparentize($light-color, 0.8);
+        box-shadow: 0 0 0.5rem 0rem transparentize($color: $dark-color, $amount: 0.77);
+        border-radius: 2px;
+        &:last-child{
+            margin-bottom: 0 !important;
+        }
+        &__title{
+            text-transform: uppercase;
+            margin: 1rem 0;
+            font-size: 1.6rem;
+        }
+        ul{
+            li{
+                position: relative;
+            }
+            a{
+                color: lighten($color: $dark-color, $amount: 25%);
+                display: inline-flex;
+                width: 100%;
+                padding: 0.3rem;
+                transition: 0.3s;
+                &:hover{
+                    color: lighten($color: $dark-color, $amount: 10%);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

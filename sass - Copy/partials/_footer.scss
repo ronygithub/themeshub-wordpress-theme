@@ -1,0 +1,16 @@
+.themeshub__footer{
+    background: $dark-color;
+    display: grid;
+    grid-template-areas: '. inner inner inner inner inner .';
+
+    &--inner{
+        grid-area: inner;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            margin-bottom: 0;
+            padding: 1.5rem 0;
+        }
+    }
+}
